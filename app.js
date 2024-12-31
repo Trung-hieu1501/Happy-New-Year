@@ -94,8 +94,8 @@ tl.add(animateNotes(notesG1)).add(animateNotes(notesG2), ">0.05").add(animateNot
             return Math.floor(Math.random() * (max - min + 1) + min);
         },
         get period() {
-            var dateFuture = new Date(new Date().getFullYear() + 1, 0, 1);
-            //var dateFuture = new Date(2025, 01, 01,0,0,01);
+            //var dateFuture = new Date(new Date().getFullYear() + 1, 0, 1);
+            var dateFuture = new Date(2025, 01, 01,0,0,01);
             var dateNow = new Date();
             var seconds = Math.floor((dateFuture - dateNow) / 1000);
             if (seconds <= 0) {
