@@ -1756,15 +1756,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.box-content .right .content{
-    width: 90%;
-    height: 95%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    user-select: none;
-    background: rgb(255, 216, 138);
-}
+/* ---------------------------- */
+
 .box-content .right .content .title{
     font-family: 'Dancing Script', cursive;
     width: 150px;
@@ -1772,15 +1765,19 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    #overflow: hidden;
+    /* overflow: hidden; */
 }
+
 .box-content .right .content .title h1{
     margin-top: -40px;
     transition: 0.5s;
 }
-.slider3:hover .title h1{
+
+/* Sử dụng animation thay vì hover */
+.slider3 .title h1{
     animation: title 2s forwards;
 }
+
 @keyframes title{
     0%{
         margin-top: -40px;
@@ -1789,6 +1786,7 @@ body{
         margin-top: 0px;
     }
 }
+
 .box-content .right .content p{
     padding: 30px 15px 0px 15px;
     text-align: center;
@@ -1797,9 +1795,12 @@ body{
     opacity: 0;
     transition: 1s;
 }
-.slider3:hover .content p{
+
+/* Thêm animation-fill-mode để nội dung vẫn giữ nguyên sau khi hover */
+.slider3 .content p{
     animation: bodyContent 2s 1s forwards;
 }
+
 @keyframes bodyContent{
     0%{
         opacity: 0;
@@ -1808,21 +1809,26 @@ body{
         opacity: 1;
     }
 }
+
 .content .fixedContent{
     width: 250px;
     height: 80px;
     overflow: hidden; 
     margin-left: 150px;  
 }
+
 .box-content .right .content h3{
     font-size: 18px;
     font-family: 'Dancing Script', cursive;
     padding: 20px 0px 0px 20px;
     margin-top: -50px;
 }
-.slider3:hover .content h3{
+
+/* Animation giữ nguyên trạng thái khi di chuột ra ngoài */
+.slider3 .content h3{
     animation: fixedContent 2s 2s forwards;
 }
+
 @keyframes fixedContent{
     0%{
         margin-top: -50px;
@@ -1831,6 +1837,9 @@ body{
         margin-top: 0px;
     }
 }
+
+
+/* ------------------------------------------------------------- */
 
 /* ----active------ */
 
